@@ -1,0 +1,43 @@
+@import './../../../styles/colors';
+
+.sidebar-position {
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+
+  &__icon {
+    color: $color-primary;
+    min-width: 25px;
+    text-align: center;
+  }
+
+  &__label {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    padding: 0 15px;
+    transition: width 0.5s ease;
+    color: $color-tertiary;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &--open {
+    .sidebar-position__label {
+      display: block;
+      width: 100%;
+      height: auto;
+      opacity: 1;
+      transition: all 0.5s ease, opacity 0.5s ease 0.5s;
+    }
+  }
+
+  &:hover {
+    background-color: $color-shadow;
+    border-right: 5px $color-primary solid;
+  }
+}

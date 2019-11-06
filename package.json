@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "webpack-dev-server --open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -19,8 +21,17 @@
   },
   "homepage": "https://github.com/mejdej93/ui-dark#readme",
   "devDependencies": {
+    "@babel/core": "^7.7.0",
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "@storybook/addon-actions": "^5.2.5",
+    "@storybook/addon-links": "^5.2.5",
+    "@storybook/addons": "^5.2.5",
+    "@storybook/react": "^5.2.5",
+    "@types/classnames": "^2.2.9",
     "@types/react": "^16.9.9",
     "@types/react-dom": "^16.9.2",
+    "babel-loader": "^8.0.6",
+    "classnames": "^2.2.6",
     "css-loader": "^3.2.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.12.0",
