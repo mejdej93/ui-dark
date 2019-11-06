@@ -1,4 +1,5 @@
 @import './../../styles/colors';
+
 @import './../../styles/utils';
 
 @mixin button-background($background-color) {
@@ -13,6 +14,7 @@
 }
 
 .Button {
+
   @extend .Centered;
   min-width: 120px;
   height: 50px;
@@ -26,14 +28,17 @@
   text-transform: capitalize;
 
   &--primary {
+
     @include button-background($color-primary);
   }
 
   &--secondary {
+
     @include button-background($color-secondary);
   }
 
   &--tertiary {
+
     @include button-background($color-tertiary);
     color: $color-text-dark;
   }
