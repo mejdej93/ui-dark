@@ -1,0 +1,47 @@
+@import './../../styles/colors';
+@import './../../styles/utils';
+
+@mixin button-background($background-color) {
+  background-color: $background-color;
+  border-color: $background-color;
+  color: $color-text;
+
+  &:hover {
+    background-color: darken($background-color, 10%);
+    border-color: darken($background-color, 10%);
+  }
+}
+
+.Button {
+  @extend .Centered;
+  min-width: 120px;
+  height: 50px;
+  border: 1px $color-primary solid;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  margin: 1rem 0.5rem;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+
+  &--primary {
+    @include button-background($color-primary);
+  }
+
+  &--secondary {
+    @include button-background($color-secondary);
+  }
+
+  &--tertiary {
+    @include button-background($color-tertiary);
+    color: $color-text-dark;
+  }
+
+  &--small {
+    border-radius: 50%;
+    min-width: 40px;
+    max-width: 40px;
+    height: 40px;
+  }
+}

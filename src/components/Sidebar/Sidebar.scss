@@ -1,6 +1,6 @@
 @import './../../styles/colors';
 
-.sidebar {
+.Sidebar {
   position: fixed;
   width: 50px;
   height: 100%;
@@ -13,7 +13,7 @@
   }
 }
 
-.trigger {
+.Trigger {
   height: 50px;
   font-size: 24px;
   cursor: pointer;
@@ -21,4 +21,5 @@
   align-items: center;
   justify-content: flex-end;
   padding: 0 12px 15px;
+  color: $color-primary;
 }

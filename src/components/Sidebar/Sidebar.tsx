@@ -12,13 +12,13 @@ export const Sidebar: FC<SidebarProps> = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const sidebarClassNames = classNames({
-        'sidebar': true,
-        'sidebar--open': isOpen
+        'Sidebar': true,
+        'Sidebar--open': isOpen
     });
 
     return (
         <div className={sidebarClassNames}>
-            <a id="trigger" className="trigger" onClick={() => setIsOpen(!isOpen)}>
+            <a id="trigger" className="Trigger" onClick={() => setIsOpen(!isOpen)}>
                 <i className="fa fa-bars"/>
             </a>
 

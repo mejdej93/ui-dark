@@ -1,0 +1,17 @@
+.Centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Flex {
+  &-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+  }
+}
