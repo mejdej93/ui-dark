@@ -1,6 +1,8 @@
 import React, { FC, useState } from 'react'
 import classNames from 'classnames';
 import { SidebarPosition } from './Position/SidebarPosition';
+import { faBars, faTimes, faCogs } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Sidebar.scss';
 
 interface SidebarProps {
@@ -19,10 +21,10 @@ export const Sidebar: FC<SidebarProps> = () => {
     return (
         <div className={sidebarClassNames}>
             <a id="trigger" className="Trigger" onClick={() => setIsOpen(!isOpen)}>
-                <i className="fa fa-bars"/>
+                <FontAwesomeIcon icon={isOpen ? faTimes : faBars}/>
             </a>
 
-            <SidebarPosition isOpen={isOpen} icon="fa-cogs" label="First position"/>
+            <SidebarPosition isOpen={isOpen} icon={faCogs} label="First position"/>
         </div>
     );
 };

@@ -1,5 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { faCheck, faInfo, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, ButtonClassName } from './Button';
 
 storiesOf('Button', module)
@@ -11,13 +13,13 @@ storiesOf('Button', module)
         </div>
         <div className="Flex-row">
             <Button small className={ButtonClassName.primary}>
-                <i className="fa fa-check"/>
+                <FontAwesomeIcon icon={faCheck}/>
             </Button>
             <Button small className={ButtonClassName.secondary}>
-                <i className="fa fa-times"/>
+                <FontAwesomeIcon icon={faTimes}/>
             </Button>
             <Button small className={ButtonClassName.tertiary}>
-                <i className="fa fa-info"/>
+                <FontAwesomeIcon icon={faInfo}/>
             </Button>
         </div>
     </div>);
