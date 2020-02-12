@@ -1,9 +1,11 @@
-$color-background: #233142;
-$color-primary: #15a78a;
-$color-secondary: #f95959;
-$color-tertiary: #e3e3e3;
+$color-background: #2b2e4a;
+$color-primary: #e84545;
+$color-secondary: #903749;
+$color-tertiary: #15a78a;
 
 $color-text: white;
 $color-text-dark: black;
 
-$color-shadow: lighten($color-background, 10%);
+$color-shadow: darken($color-background, 10%);
+
+$sidebar-closed-width: 50px;

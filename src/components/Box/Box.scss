@@ -1,0 +1,28 @@
+@import './../../styles/colors';
+
+$padding-vertical: 1rem;
+
+.Box {
+  display: flex;
+  border: 1px solid $color-shadow;
+  min-width: 33%;
+  max-width: 50%;
+  min-height: 300px;
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 1.5rem;
+    padding: 0.5rem $padding-vertical;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    box-shadow: 0 0.1rem 0 0 $color-shadow;
+  }
+
+  &-content {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+}

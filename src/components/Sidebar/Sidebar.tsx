@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react'
 import classNames from 'classnames';
 import { SidebarPosition } from './Position/SidebarPosition';
-import { faBars, faTimes, faCogs } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faCogs, faTimes, faAddressBook, faIdCard } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Sidebar.scss';
 
@@ -24,7 +24,9 @@ export const Sidebar: FC<SidebarProps> = () => {
                 <FontAwesomeIcon icon={isOpen ? faTimes : faBars}/>
             </a>
 
-            <SidebarPosition isOpen={isOpen} icon={faCogs} label="First position"/>
+            <SidebarPosition isOpen={isOpen} icon={faCogs} label="First position" />
+            <SidebarPosition isOpen={isOpen} icon={faIdCard} label="Second position"/>
+            <SidebarPosition isOpen={isOpen} icon={faAddressBook} label="Third position"/>
         </div>
     );
 };

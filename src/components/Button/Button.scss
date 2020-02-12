@@ -40,7 +40,6 @@
   &--tertiary {
 
     @include button-background($color-tertiary);
-    color: $color-text-dark;
   }
 
   &--small {
