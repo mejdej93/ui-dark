@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import './styles/app.scss';
@@ -12,13 +12,13 @@ const store = createStore(loginReducer);
 export const App = () => {
     return (
         <Provider store={store}>
-            <BrowserRouter>
+            <Router>
                 <Switch>
                     <Route exact path="/" component={LoginView}/>
-                    <Route path="/login" component={LoginView}/>
                     <Route path="/dashboard" component={DashboardView}/>
+                    <Redirect to="/"/>
                 </Switch>
-            </BrowserRouter>
+            </Router>
         </Provider>
     );
 };

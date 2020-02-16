@@ -3,8 +3,11 @@ import { ApiService } from '../../api/ApiService';
 import { LoginForm } from './LoginForm/LoginForm';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../state/actions/login.actions';
+import { useHistory } from 'react-router';
 
 export const LoginView = () => {
+
+    const history = useHistory();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -20,6 +23,7 @@ export const LoginView = () => {
             .then(response => {
                 console.log(response.data);
                 dispatch(logIn());
+                history.push('/dashboard');
             });
     };
 
