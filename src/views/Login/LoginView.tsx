@@ -23,7 +23,7 @@ export const LoginView = () => {
             .then(response => {
                 console.log(response.data);
                 dispatch(logIn());
-                history.push('/dashboard');
+                history.push('/auth/dashboard');
             });
     };
 

@@ -15,7 +15,10 @@ export const App = () => {
             <Router>
                 <Switch>
                     <Route exact path="/" component={LoginView}/>
-                    <Route path="/dashboard" component={DashboardView}/>
+                    <Route path="/auth">
+                        <Route path="/auth/dashboard" component={DashboardView}/>
+                        <Redirect to="/auth/dashboard"/>
+                    </Route>
                     <Redirect to="/"/>
                 </Switch>
             </Router>
