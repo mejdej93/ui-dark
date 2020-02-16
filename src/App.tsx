@@ -5,8 +5,7 @@ import { Provider } from 'react-redux';
 import './styles/app.scss';
 import { DashboardView } from './views/Dashboard/DashboardView';
 import { LoginView } from './views/Login/LoginView';
-import { loginReducer } from './state/reducers/login.reducers';
-import { Sidebar } from './components/Sidebar/Sidebar';
+import { loginReducer } from './state/reducers/login.reducer';
 
 const store = createStore(loginReducer);
 
@@ -20,7 +19,6 @@ export const App = () => {
                     <Route path="/dashboard" component={DashboardView}/>
                 </Switch>
             </BrowserRouter>
-            <Sidebar/>
         </Provider>
     );
 };

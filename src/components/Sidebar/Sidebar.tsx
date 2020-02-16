@@ -4,9 +4,8 @@ import { SidebarPosition } from './Position/SidebarPosition';
 import { faAddressBook, faBars, faCogs, faIdCard, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Sidebar.scss';
-import { LoginState } from '../../state/actions/login.types';
 
-interface SidebarProps extends LoginState {
+interface SidebarProps {
 
 }
 
