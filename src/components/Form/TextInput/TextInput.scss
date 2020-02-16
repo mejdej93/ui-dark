@@ -1,0 +1,47 @@
+@import './../../../styles/colors';
+
+.TextInput {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0 0;
+
+  &:last-of-type {
+    padding-bottom: 1rem;
+  }
+
+  &--column {
+    flex-direction: column;
+
+    .TextInput-label {
+      padding: 0.5rem 1rem 0.5rem 0;;
+    }
+  }
+
+  @media screen and (max-width: $screen-sm-max) {
+    flex-direction: column;
+  }
+
+  &-input {
+    background: $color-background-input;
+    border: none;
+    box-shadow: 0 2px 1px 0 $color-tertiary;
+    height: 2rem;
+    padding: 0 0.5rem;
+    color: $color-text;
+    outline: none;
+  }
+
+  &-label {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-transform: capitalize;
+    color: $color-text;
+    padding: 0 1rem 0 0;
+    width: 150px;
+
+    @media screen and (max-width: $screen-sm-max) {
+      width: 100%;
+      padding: 0.5rem 1rem 0.5rem 0;
+    }
+  }
+}

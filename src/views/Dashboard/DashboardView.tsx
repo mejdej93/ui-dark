@@ -1,8 +1,8 @@
 import React from 'react';
-import './Dashboard.scss';
+import './DashboardView.scss';
 import { Box } from '../../components/Box/Box';
 
-export const Dashboard = () => {
+export const DashboardView = () => {
     return (
         <main className="Dashboard">
             <Box title="Widget no 1">

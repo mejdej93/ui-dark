@@ -9,4 +9,9 @@ $color-text-dark: black;
 
 $color-shadow: darken($color-background, 10%);
 
+$color-background-input: lighten($color-background, 15%);
+
 $sidebar-closed-width: 50px;
+
+$screen-sm-max: 767px;
+$screen-md: 768px;

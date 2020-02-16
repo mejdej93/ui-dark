@@ -1,23 +1,25 @@
-import React, { ButtonHTMLAttributes, FC } from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 import classNames from 'classnames';
 import './Button.scss';
 
-export enum ButtonClassName {
+export enum ButtonVariant {
     primary = 'primary',
     secondary = 'secondary',
     tertiary = 'tertiary'
 }
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    className?: ButtonClassName;
+    variant?: ButtonVariant;
     small?: boolean;
+    fullWidth?: boolean;
 }
 
-export const Button: FC<ButtonProps> = ({children, className, small, ...props}) => {
+export function Button({children, className, variant = ButtonVariant.tertiary, small, fullWidth, ...props}: ButtonProps) {
     const buttonClassName = classNames({
         'Button': true,
-        [`Button--${className}`]: className,
-        'Button--small': small
+        [`Button--${variant}`]: variant,
+        'Button--small': small,
+        'Button--fullWidth': fullWidth
     });
 
     return (
@@ -25,4 +27,6 @@ export const Button: FC<ButtonProps> = ({children, className, small, ...props}) 
             {children}
         </button>
     )
-};
+}
+
+Button.variant = ButtonVariant;

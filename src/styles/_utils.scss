@@ -1,10 +1,10 @@
-.Centered {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .Flex {
+
+  &-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &-column {
     display: flex;
